@@ -1,0 +1,66 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Stage - Full viewport container */
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6vw 6vw 4vw;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 4vh;
+}
+
+/* Main Section */
+main {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4vw;
+  align-items: end;
+  border-top: 1px solid var(--line);
+  padding-top: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+/* Links Column */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.side a {
+  width: fit-content;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 3rem;
+}
+
+footer > span {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,50 @@
+@media (max-width: 720px) {
+  .stage {
+    padding: 8vw 6vw;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tag {
+    text-align: left;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stage {
+    padding: 10vw 5vw 8vw;
+  }
+
+  .status {
+    font-size: 1.15rem;
+  }
+}
+
+/* Accessibility Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .pip {
+    animation: none;
+  }
+  .stage {
+    animation: none;
+  }
+  .wordmark .mask,
+  .wordmark .hara {
+    transition: none !important;
+    transform: none !important;
+  }
+}
