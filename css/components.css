@@ -21,13 +21,6 @@
   }
 }
 
-/* Interactive Link Hover Effects */
-.side a:hover,
-.side a:focus-visible {
-  border-color: var(--orange);
-  color: var(--paper);
-  opacity: 1;
-}
 
 /* Accessibility Focus States */
 :focus-visible {
@@ -49,4 +42,32 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Particle Dot-Matrix Wordmark Component */
+.particle-wordmark {
+  display: block;
+  position: relative;
+  height: 0.86em;         /* Matches .wordmark line-height — keeps layout compact */
+  overflow: visible;      /* Canvas bleeds out visually but layout height stays exact */
+}
+
+.particle-wordmark .hara-fallback {
+  display: inline-block;
+  color: var(--orange);
+}
+
+.particle-wordmark.initialized .hara-fallback {
+  display: none;
+}
+
+.particle-text-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  touch-action: none;
+  z-index: 1;
 }

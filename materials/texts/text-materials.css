@@ -1,0 +1,65 @@
+/**
+ * Studio Maskhara - Text Materials & Typography Shaders
+ * Scalable and moveable text styling presets.
+ */
+
+/* Moveable Text Container */
+.sm-scalable-text {
+  display: inline-block;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  transform-origin: center center;
+  transition: box-shadow 0.2s ease;
+}
+
+.sm-scalable-text:active {
+  cursor: grabbing;
+}
+
+.sm-scalable-text.selected {
+  outline: 1px dashed var(--orange, #FF5A2A);
+  outline-offset: 4px;
+}
+
+/* Material Presets */
+.sm-mat-solid {
+  color: var(--paper, #EFEAE0);
+}
+
+.sm-mat-orange {
+  color: var(--orange, #FF5A2A);
+}
+
+/* Outlined Stroke Typography Material */
+.sm-mat-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--paper, #EFEAE0);
+}
+
+.sm-mat-stroke-orange {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--orange, #FF5A2A);
+}
+
+/* Kinetic Gradient Typography Material */
+.sm-mat-gradient {
+  background: linear-gradient(135deg, var(--paper, #EFEAE0) 0%, var(--orange, #FF5A2A) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dot Matrix Typography Material */
+.sm-mat-dots {
+  background-image: radial-gradient(var(--orange, #FF5A2A) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing Neon Typography Material */
+.sm-mat-glow {
+  color: var(--orange, #FF5A2A);
+  text-shadow: 0 0 10px rgba(255, 90, 42, 0.6), 0 0 24px rgba(255, 90, 42, 0.3);
+}

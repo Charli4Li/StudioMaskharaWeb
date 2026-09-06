@@ -21,8 +21,11 @@ html, body {
   font-size: 0.85rem;
   font-variation-settings: 'wght' 500, 'wdth' 90;
   letter-spacing: 0.02em;
-  line-height: 1.5;
+  color: var(--paper);
   opacity: 0.55;
+  max-width: 22ch;
+  line-height: 1.5;
+  text-align: right;
   margin: 0;
 }
 
@@ -32,9 +35,7 @@ html, body {
   font-variation-settings: 'wght' 850, 'wdth' 118;
   line-height: 0.86;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
   user-select: none;
-  margin-bottom: 2rem;
 }
 
 .wordmark .mask {
@@ -58,14 +59,18 @@ html, body {
 
 /* Links & Footer */
 .side a {
-  font-size: 0.95rem;
-  font-variation-settings: 'wght' 450, 'wdth' 95;
   color: var(--paper);
   text-decoration: none;
   border-bottom: 1px solid var(--line);
   padding-bottom: 0.15rem;
-  opacity: 0.85;
-  transition: border-color var(--transition-fast), opacity var(--transition-fast), color var(--transition-fast);
+  width: fit-content;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.side a:hover,
+.side a:focus-visible {
+  border-color: var(--orange);
+  opacity: 1;
 }
 
 footer {
